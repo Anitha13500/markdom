@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title></title>
+</head>
+<body>
+	<input type="number" id="tamil" placeholder="enter tamil mark" value=""></input>
+	<input type="number" id="english" placeholder="enter english mark" value=""></input>
+	<input type="number" id="maths" placeholder="enter maths mark" value=""></input>
+	<input type="number" id="science" placeholder="enter science mark" value=""></input>
+	<input type="number" id="social" placeholder="enter social mark" value=""></input>
+	<button id="btn" value="">click button</button>
+	<h1 id="para" value=""></h1>
+	<h2 id="value" value=""></h2>
+	<h1 id="answer"></h1>
+	<script>
+		let but=document.getElementById("btn")
+		btn.addEventListener("click",name)
+		function name(){
+			let tamil=document.getElementById("tamil").value;
+			let english=document.getElementById("english").value;
+			let maths=document.getElementById("maths").value;
+			let science=document.getElementById("science").value;
+			let social=document.getElementById("social").value;
+			let total=parseInt(tamil)+parseInt(english)+parseInt(maths)+parseInt(science)+parseInt(social);
+			document.getElementById("para").innerHTML=total;
+			let percentage=total/500*100;
+			document.getElementById("value").innerHTML=percentage;
+			
+			
+				if(percentage>90){
+				document.getElementById("answer").innerHTML="A"
+				}
+				else if(percentage>=70){
+				document.getElementById("answer").innerHTML="B"
+				}
+				else if(percentage>=60){
+				document.getElementById("answer").innerHTML="C"
+				}
+				else if(percentage>=50){
+				document.getElementById("answer").innerHTML="D"
+				}
+				else if(percentage>=40){
+				document.getElementById("answer").innerHTML="E"
+				}
+				else{
+				document.getElementById("answer").innerHTML="F"
+				}
+		}
+		
+		
+	</script>
+</body>
+</html>
